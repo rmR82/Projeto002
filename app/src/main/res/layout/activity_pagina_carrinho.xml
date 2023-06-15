@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".PaginaCarrinho">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Visão geral da compra"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="15dp"
+        android:layout_height="15dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Informações do Cliente"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <!-- Espaço para as informações do Cliente -->
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="127dp"
+            android:textSize="12dp"
+            android:id="@+id/listaResultadoCliente">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <!-- Isso aqui é só uma separação -->
+    <LinearLayout
+        android:layout_width="10dp"
+        android:layout_height="10dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informações dos Itens"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+
+        <!-- Espaço para a listagem de Itens -->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:id="@+id/listaResultadoItens">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
