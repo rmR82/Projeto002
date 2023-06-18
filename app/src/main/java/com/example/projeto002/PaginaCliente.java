@@ -2,8 +2,10 @@ package com.example.projeto002;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,6 +16,8 @@ public class PaginaCliente extends AppCompatActivity {
     private EditText nomeCliente;
     private EditText cpfCliente;
     private EditText emailCliente;
+
+    private Button botaoVoltar;
     private ClienteDAO daocliente;
 
     @Override
@@ -25,7 +29,16 @@ public class PaginaCliente extends AppCompatActivity {
         nomeCliente = findViewById(R.id.editNomeCliente);
         cpfCliente = findViewById(R.id.editCPFCliente);
         emailCliente = findViewById(R.id.editEmailCliente);
+        botaoVoltar = findViewById(R.id.buttonVoltarDoCliente);
         daocliente = new ClienteDAO(this); //instancio o daocliente criado lá em cima
+
+        botaoVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PaginaCliente.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -36,7 +49,11 @@ public class PaginaCliente extends AppCompatActivity {
         a.setEmail(emailCliente.getText().toString());
         long id = daocliente.inserir(a); //aqui, eu salvo o cliente recém criado, e já atribui um id (automático e autoincrement)
 
-        Toast.makeText(this, "Cliente salvo. "+id, Toast.LENGTH_SHORT); //só um toastzinho pra aparecer e dar o "ok" quando salva
+        Toast.makeText(this, "Cliente salvo. "+id, Toast.LENGTH_SHORT).show(); //só um toastzinho pra aparecer e dar o "ok" quando salva
+
+        nomeCliente.setText("");  //depois de salvas as informações, limpa o formulário
+        cpfCliente.setText("");
+        emailCliente.setText("");
     }
 
 }

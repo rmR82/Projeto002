@@ -26,7 +26,7 @@ public class ItensDAO {   //responsável por acessar o BD, inserir dados
         values.put("nome", itens.getNome());
         values.put("valor", itens.getValor());
         values.put("quantidade", itens.getQuantidade());
-        return banco.insert("tabelaitense", null, values); //informo o nome da tabela, que não tem valores vazios e os valores são a variável "values"
+        return banco.insert("tabelaitens", null, values); //informo o nome da tabela, que não tem valores vazios e os valores são a variável "values"
     }
 
     //precisa do método pra consultar, pra poder mostrar na PaginaCarrinho

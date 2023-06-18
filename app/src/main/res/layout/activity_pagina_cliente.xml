@@ -118,4 +118,26 @@
             app:iconPadding="4dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="20dp"
+        android:layout_height="20dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout8">
+
+        <Button
+            android:id="@+id/buttonVoltarDoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:onClick="voltarDoCliente"
+            android:text="Voltar"
+            android:textSize="10sp"
+            app:iconPadding="4dp" />
+    </LinearLayout>
+
 </LinearLayout>
